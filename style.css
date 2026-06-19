@@ -56,20 +56,37 @@ nav a:hover{
 /* Hero Section */
 
 .hero{
+    position:relative;
     height:80vh;
-    background:
-    linear-gradient(
-        rgba(0,0,0,0.6),
-        rgba(0,0,0,0.8)
-    ),
-    url("images/interstellar.jpg");
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    padding:0 50px;
+}
 
-    background-size:cover;
-    background-position:center;
+.hero-video{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:-2;
+}
+
+.overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+    z-index:-1;
 }
 
 .hero-content{
     max-width:600px;
+    z-index:1;
 }
 
 .hero h1{
